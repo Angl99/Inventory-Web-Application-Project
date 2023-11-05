@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Store Inventory</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="events/main.js"></script> 
+    <script src="events/main.js" defer></script> 
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
             </div>
             <div>
                 <label>Year</label>
-                <input type="text" name="movieYear" />
+                <input type="number" name="movieYear" />
             </div>
             <div>
                 <label>Genre</label>
@@ -31,13 +31,14 @@
             </div>
             <div> 
                 <label>Price</label>
-                <input type="text" name="moviePrice" />
+                <input type="number" name="moviePrice" />
             </div>
             <div> 
                 <label>In Stock</label>
                 <select name="movieInStock" id="movieInStock">
-                    <option value="In Stock">In stock</option>
-                    <option value="Out of Stock">No</option>
+                    <option disabled selected>Select One</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
                     <option value="Preorder">Preorder</option>
                 </select>
             </div>
