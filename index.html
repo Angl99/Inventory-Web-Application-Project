@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Store Inventory</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="events/main.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Madhouse Cinema</h1>
+    </header>   
+    <main>
+        <form id="new-movie-form">
+            <div>
+                <label>Name</label>
+                <input type="text" name="movieName" />
+            </div>
+            <div>
+                <label>Year</label>
+                <input type="text" name="movieYear" />
+            </div>
+            <div>
+                <label>Genre</label>
+                <input type="text" name="movieGenre"/>
+            </div>
+            <div>
+                <label>Image URL</label>
+                <input type="text" name="movieImageUrl" />
+            </div>
+            <div> 
+                <label>Price</label>
+                <input type="text" name="moviePrice" />
+            </div>
+            <div> 
+                <label>In Stock</label>
+                <input type="text" name="movieInStock" />
+            </div>
+            <input type="submit" />
+            <input type="reset" />
+            <button type="button" id="removeButton">Remove</button>
+        </form> 
+    </main>
+</body>
+</html>
