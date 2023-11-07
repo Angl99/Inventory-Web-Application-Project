@@ -47,13 +47,22 @@ function createMovie(movie) {
     const movieInStock = document.createElement("p");
     movieInStock.textContent = movie.instock;
 
+    const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            movieContainer.remove();
+        });
+
     movieContainer.append(
+        movieImageElement,
         movieName, 
         movieYear, 
-        movieGenre, 
-        movieImageElement, 
+        movieGenre,  
         moviePrice, 
-        movieInStock);
+        movieInStock,
+        removeButton
+        );
 
 const mainSection = document.querySelector("main");
   mainSection.append(movieContainer);
@@ -79,10 +88,10 @@ const formElement = document.getElementById("new-movie-form");
         formElement.reset();
 
         createMovie({
+            img,
             name,
             year,
             genre,
-            img,
             price,
             inStock
         });

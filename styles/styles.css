@@ -1,0 +1,18 @@
+h1 {
+    background-color: #4242ea;
+    
+  }
+
+img {
+    
+    width: 200px;
+    height: 200px;
+    display: block;
+    outline: lightblue solid 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
