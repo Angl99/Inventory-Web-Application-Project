@@ -12,43 +12,57 @@
     <div class="header">
         <h1>Madhouse Cinema</h1>
     </div>
+    <div class="container">
+        <main>
+            <div class="window-items">
+
+            </div>
+
+        </main>
         <form id="new-movie-form">
-            <div>
-                <label>Name</label>
+            <div class="subtitle">Add a New Movie</div>
+
+            <div class="input-container ic1">
+                <label>Movie Name</label>
                 <input type="text" name="movieName" />
             </div>
-            <div>
+
+            <div class="input-container ic2">
                 <label>Year</label>
                 <input type="number" name="movieYear" />
             </div>
-            <div>
+
+            <div class="input-container ic3">
                 <label>Genre</label>
                 <input type="text" name="movieGenre"/>
             </div>
-            <div>
+
+            <div class="input-container ic4">
                 <label>Image URL</label>
                 <input type="text" name="movieImageUrl" />
             </div>
-            <div> 
+
+            <div class="input-container ic5"> 
                 <label>Price</label>
                 <input type="number" name="moviePrice" />
             </div>
-            <div> 
+
+            <div class="option-container ic6"> 
                 <label>In Stock</label>
                 <select name="movieInStock" id="movieInStock">
                     <option disabled selected>Select One</option>
                     <option value="In Stock">In Stock</option>
                     <option value="Out of Stock">Out of Stock</option>
-                    <option value="Preorder">Preorder</option>
                 </select>
             </div>
-            <input type="submit" />
-            <input type="reset" />
-        </form> 
-        <div class="container">
-        <main>
+            <p id="error-box"></p>
 
-        </main>
+            <div class ="button-container">
+                <button type="text" class="submit">submit</button>
+                <button type="text" class="cancel">cancel</button>
+                <input type="reset" class= "reset"> 
+            </div>
+        </form> 
         </div>
 </body>
 </html>

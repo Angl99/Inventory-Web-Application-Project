@@ -42,10 +42,17 @@ function createMovie(movie) {
     movieImageElement.setAttribute("src", movie.img);
 
     const moviePrice = document.createElement("p");
-    moviePrice.textContent = movie.price;
+    let price = movie.price;
+    price = price.toFixed(2);
+    moviePrice.textContent = price; //movie.price;
 
     const movieInStock = document.createElement("p");
-    movieInStock.textContent = movie.instock;
+    let stockOptions = ["In Stock", "Out of Stock"];
+    if(movie.instock === "In Stock") {
+        movieInStock.textContent = stockOptions[0];
+    } else {
+        movieInStock.textContent = stockOptions[1];
+    }
 
     const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
@@ -79,11 +86,17 @@ const formElement = document.getElementById("new-movie-form");
         const img = formElement.movieImageUrl.value;
         const price = formElement.moviePrice.value;
         const inStock = formElement.movieInStock.value;
-        // const errorMsg = document.querySelector("p");
 
-        // if (movieName === "" || movieYear === "" || movieGenre === "" || movieImageUrl === "" || moviePrice === "" || movieInStock === "") {
-        //     errorMsg.textContent = "Please fill in all fields";
-        // }
+
+        const errorMessage = document.querySelector("#error-box");
+        if (name === "" || 
+            year === 0 || 
+            genre === "" || 
+            img === "" || 
+            price === 0 || 
+            inStock === "") {
+                errorMsg.textContent = "Please fill in all fields";
+            }
 
         formElement.reset();
 
@@ -96,5 +109,3 @@ const formElement = document.getElementById("new-movie-form");
             inStock
         });
     })
-
-// console.log(movieContainer);
