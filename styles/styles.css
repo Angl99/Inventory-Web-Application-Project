@@ -1,18 +1,32 @@
-h1 {
-    background-color: #4242ea;
-    
-  }
+body {
+  display: grid;
+  grid-template-rows: 100px 400px;
+  grid-template-columns: 300px 300px;
+  
+}
+
+.header {
+  background-color: rgb(255, 196, 0);
+  width: auto;
+  border: black solid 5px;
+  
+}
 
 img {
-    
-    width: 200px;
-    height: 200px;
-    display: block;
-    outline: lightblue solid 5px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  outline: lightblue solid 5px;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  background: #2d2d2d;
+  color: white;
+ 
 }
 
+form {
+  background: #ececec;
+  text-align: center;
+  
+}
