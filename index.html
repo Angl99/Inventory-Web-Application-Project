@@ -4,63 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Store Inventory</title>
-    <!-- <img src="imgs/logo.png"/> -->
     <link rel="stylesheet" href="styles/styles.css">
     <script src="events/main.js" defer></script> 
 </head>
 <body>
     <div class="header">
-        <h1>Madhouse Cinema</h1>
+        <h1>Madhouse Cinema🎥</h1>
     </div>
     <div class="container">
         <main>
-            <div class="window-items">
-
-            </div>
 
         </main>
         <form id="new-movie-form">
             <div class="subtitle">Add a New Movie</div>
 
+            <label>Movie Name</label>
             <div class="input-container ic1">
-                <label>Movie Name</label>
                 <input type="text" name="movieName" />
             </div>
 
+            <label>Year</label>
             <div class="input-container ic2">
-                <label>Year</label>
                 <input type="number" name="movieYear" />
             </div>
 
+            <label>Genre</label>
             <div class="input-container ic3">
-                <label>Genre</label>
                 <input type="text" name="movieGenre"/>
             </div>
 
+            <label>Image URL</label>
             <div class="input-container ic4">
-                <label>Image URL</label>
                 <input type="text" name="movieImageUrl" />
             </div>
 
+            <label>Price</label>
             <div class="input-container ic5"> 
-                <label>Price</label>
-                <input type="number" name="moviePrice" />
+                <input type="number" step="0.01" name="moviePrice" />
             </div>
 
+            <label>In Stock</label>
             <div class="option-container ic6"> 
-                <label>In Stock</label>
                 <select name="movieInStock" id="movieInStock">
                     <option disabled selected>Select One</option>
                     <option value="In Stock">In Stock</option>
                     <option value="Out of Stock">Out of Stock</option>
                 </select>
             </div>
-            <p id="error-box"></p>
 
+            <p id="error-box"></p>
+            
             <div class ="button-container">
                 <button type="text" class="submit">submit</button>
-                <button type="text" class="cancel">cancel</button>
-                <input type="reset" class= "reset"> 
+                <button type="text" class="reset">reset</button>
             </div>
         </form> 
         </div>
