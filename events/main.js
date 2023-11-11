@@ -1,3 +1,4 @@
+// example movie list data
 const moviesList = [
   {
     img: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
@@ -5,7 +6,7 @@ const moviesList = [
     year: 1999,
     genre: "Sci-fi",
     price: 34.99,
-    instock: "In Stock",
+    inStock: "In Stock",
   },
   {
     name: "Alien",
@@ -13,10 +14,11 @@ const moviesList = [
     genre: "Sci-fi",
     img: "https://m.media-amazon.com/images/M/MV5BOGQzZTBjMjQtOTVmMS00NGE5LWEyYmMtOGQ1ZGZjNmRkYjFhXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg",
     price: 54.99,
-    instock: "Out of Stock",
+    inStock: "Out of Stock",
   },
 ];
 
+// create movie function to create movie via form input
 function createMovie(movie) {
   const movieContainer = document.createElement("div");
   movieContainer.classList.add("movie-board");
@@ -68,6 +70,7 @@ function createMovie(movie) {
   mainSection.prepend(movieContainer);
 }
 
+// reset button event listener to reset form
 const resetElement = document.querySelector(".reset");
 resetElement.addEventListener("click", (event) => {
   event.preventDefault();
@@ -75,6 +78,7 @@ resetElement.addEventListener("click", (event) => {
   formElement.reset();
 });
 
+// submit button event listener to submit form with error handling
 const formElement = document.getElementById("new-movie-form");
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -110,6 +114,7 @@ formElement.addEventListener("submit", (event) => {
   }
 });
 
+// in-stock/out-of-stock button event listener
 document.addEventListener("click", function (event) {
   const targetElement = event.target;
 
@@ -130,6 +135,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// for loop to create movies via movieList example data
 for (const movie of moviesList) {
   createMovie(movie);
 }
