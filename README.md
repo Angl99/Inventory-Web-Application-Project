@@ -12,12 +12,12 @@ Getting Started
 3. Use the form to add new movies and interact with the existing inventory.
 
 Input the relevant information in to the form as shown:
-    - Movie Name
-    - Year
-    - Genre
-    - Image URL
-    - Price
-    - In Stock
+    * Movie Name
+    * Year
+    * Genre
+    * Image URL
+    * Price
+    * In Stock
 
 ![image of form](https://prnt.sc/fdoUtgNpDSwa)
 
